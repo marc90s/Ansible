@@ -1,5 +1,5 @@
 ---
-- name: patching playbook
+- name: RHEL,ROCKY,CENTOS 8 UPDATES using DNF
   hosts: 'node'
   become: yes
   vars:
