@@ -1,0 +1,13 @@
+---
+- name: Pull / Push build a ansible server.
+  hosts: localhost
+  become: yes
+  tasks:
+
+    - name: Install python dependencies using dnf
+      dnf:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - python39
+        - python3-pip  
