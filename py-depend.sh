@@ -9,7 +9,6 @@ package3=git
 # git info
 
 git_repo_url=https://github.com/marc90s/Build_Ansible_Server
-#playbook_name=local.yml
 
 # Install the first package
 
@@ -27,6 +26,14 @@ if sudo dnf -y install $package2; then
   echo "$package2 installed successfully!"
 else
   echo "Failed to install $package2"
+  exit 1
+fi
+echo
+
+if sudo dnf -y install $package3; then
+  echo "$package3 installed successfully!"
+else
+  echo "Failed to install $package3"
   exit 1
 fi
 echo

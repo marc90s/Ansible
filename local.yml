@@ -5,10 +5,4 @@
   become: yes
   tasks:
 
-    - name: Install python dependencies using dnf
-      dnf:
-        name: "{{ item }}"
-        state: latest
-      loop:
-        - python39
-        - python3-pip  
+    - include: tasks/dnf_update.yml
