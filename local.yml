@@ -5,5 +5,5 @@
   become: yes
   tasks:
 
-    - include: tasks/dnf_update.yml
-    - include: tasks/adduser.yml
+    - include_tasks: tasks/dnf_update.yml
+    - include_tasks: tasks/adduser.yml
