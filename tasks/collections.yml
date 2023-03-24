@@ -1,7 +1,7 @@
 - name: Install ansible collection 
   ansible_galaxy_install:
     type: collection
-    name: "{{ items }}"
+    name: "{{ item }}"
   loop:
     - community.general
     - ansible.posix
