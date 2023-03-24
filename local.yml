@@ -7,3 +7,4 @@
 
     - include_tasks: tasks/dnf_update.yml
     - include_tasks: tasks/adduser.yml
+    - include_tasks: tasks/collections.yml

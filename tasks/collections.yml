@@ -1,0 +1,11 @@
+- name: Install collection community.network
+  ansible_galaxy_install:
+    type: collection
+    name: "{{ items }}"
+  loop:
+    - ansible-galaxy collection install community.general
+    - ansible-galaxy collection install ansible.posix
+    - ansible-galaxy collection install community.windows
+    - ansible-galaxy collection install community.vmware
+    - ansible-galaxy collection install community.crypto
+
