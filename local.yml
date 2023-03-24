@@ -6,3 +6,4 @@
   tasks:
 
     - include: tasks/dnf_update.yml
+    - include: tasks/adduser.yml

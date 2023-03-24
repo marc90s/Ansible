@@ -1,0 +1,21 @@
+# add ansible user and create a sudoers.d entree for sudo privilege
+
+- name: create ansible user
+  user:
+    user: ansible
+    comment: ansibleuser
+    group: ansible
+    groups: wheel
+  notify:
+    - create ssh-keys for user ansible
+
+
+  handlers:
+    - name: create ssh-keys for user ansible
+      user: 
+        name: ansible
+        generate_ssh_key: yes
+        ssh_key_bit: 2048
+        ssh_key_file .ssh/id_rsa
+       
+  
