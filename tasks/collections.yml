@@ -3,9 +3,9 @@
     type: collection
     name: "{{ items }}"
   loop:
-    - ansible-galaxy collection install community.general
-    - ansible-galaxy collection install ansible.posix
-    - ansible-galaxy collection install community.windows
-    - ansible-galaxy collection install community.vmware
-    - ansible-galaxy collection install community.crypto
+    - community.general
+    - ansible.posix
+    - community.windows
+    - community.vmware
+    - community.crypto
 
