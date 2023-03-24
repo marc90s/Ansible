@@ -7,7 +7,6 @@
     group: ansible
     groups: wheel
     generate_ssh_key: yes
-    ssh_key_bit: 2048
     ssh_key_file: .ssh/id_rsa
        
   
