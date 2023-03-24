@@ -1,6 +1,7 @@
 ---
 - name: Pull / Push build a ansible server.
   hosts: localhost
+  connection: local
   become: yes
   tasks:
 

@@ -7,7 +7,7 @@ package2=python3-pip
 
 # git info
 
-git_repo_url=https://github.com/marc90s/Ansible.git
+git_repo_url=https://github.com/marc90s/Build_Ansible_Server
 playbook_name=build_ansible_server.yml
 
 # Install the first package
@@ -40,7 +40,7 @@ if ansible --version | head -n 1 | grep -iq "ansible"; then
     echo "ansible installed successfully!"
 
     # Run ansible pull
-    ansible-pull -U $git_repo_url $playbook_name.yml
+    ansible-pull -U $git_repo_url/$playbook_name.yml
 else
     echo "ansible installation failed!"
 fi
