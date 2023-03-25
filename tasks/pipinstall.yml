@@ -1,0 +1,7 @@
+- name: Install bottle python package
+  pip:
+    name: "{{ item }}"
+  loop:
+    - pywinrm
+    - pyvmomi
+
