@@ -1,5 +1,5 @@
 ---
-- name: Pull / Push build a ansible server.
+- name: Begin building and configuring ansible server defined in Git.
   hosts: localhost
   connection: local
   become: yes
