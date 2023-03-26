@@ -4,13 +4,11 @@
 
 - name:  
   community.general.ansible_galaxy_install:
-    type: collection
-    name: "{{ item }}"
-  loop:
-    - community.general
-    - ansible.posix
-    - community.windows
-    - community.vmware
-    - community.crypto
-  executable: "{{ ansible_env.PATH }}/ansible-galaxy"
+    collections: 
+      - community.general
+      - ansible.posix
+      - community.windows
+      - community.vmware
+      - community.crypto
+    executable: "{{ ansible_env.PATH }}/ansible-galaxy"
 
