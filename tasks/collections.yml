@@ -16,3 +16,7 @@
   shell: "{{ item }}"
   loop:
     - /usr/local/bin/ansible-galaxy collection install ansible.posix
+    - /usr/local/bin/ansible-galaxy collection install community.crypto
+    - /usr/local/bin/ansible-galaxy collection install community.vmware
+    - /usr/local/bin/ansible-galaxy collection install community.windows
+    - /usr/local/bin/ansible-galaxy collection install community.general
