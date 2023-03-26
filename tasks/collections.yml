@@ -1,22 +1,13 @@
-#- name: Install ansible collection 
-#  environment:
-#    PATH: "{{ lookup('env', 'HOME') }}/usr/local/bin:{{ ansible_env.PATH }}" 
-#  community.general.ansible_galaxy_install:
-#    type: collection
-#    name: "{{ item }}"
-#  loop:
-#    - community.general
-#    - ansible.posix
-#    - community.windows
-#    - community.vmware
-#    - community.crypto
-
-
-- name: test
-  shell: "{{ item }}"
+- name: Install ansible collection 
+  environment:
+    PATH: "{{ lookup('env', 'PATH') }}/usr/local/bin:{{ ansible_env.PATH }}" 
+  community.general.ansible_galaxy_install:
+    type: collection
+    name: "{{ item }}"
   loop:
-    - /usr/local/bin/ansible-galaxy collection install ansible.posix
-    - /usr/local/bin/ansible-galaxy collection install community.crypto
-    - /usr/local/bin/ansible-galaxy collection install community.vmware
-    - /usr/local/bin/ansible-galaxy collection install community.windows
-    - /usr/local/bin/ansible-galaxy collection install community.general
+    - community.general
+    - ansible.posix
+    - community.windows
+    - community.vmware
+    - community.crypto
+
