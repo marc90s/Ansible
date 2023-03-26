@@ -1,10 +1,9 @@
-#- name: ansible collection 
-#  set_fact:
-#    PATH: "{{ lookup('env', 'PATH') }}/usr/local/bin:{{ ansible_env.PATH }}" 
+- name: ansible collection 
+  environment:
+    PATH: "{{ lookup('env', 'PATH') }}:/usr/local/bin:{{ ansible_env.PATH }}" 
 
 - name:  
   community.general.ansible_galaxy_install:
     type: collection
     name: community.windows
-  executable: "{{ ansible_env.PATH }}/ansible-galaxy"
 
