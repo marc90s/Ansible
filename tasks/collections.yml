@@ -4,11 +4,14 @@
 
 - name:  
   community.general.ansible_galaxy_install:
-    collections: 
-      - community.general
-      - ansible.posix
-      - community.windows
-      - community.vmware
-      - community.crypto
-    executable: "{{ ansible_env.PATH }}/ansible-galaxy"
+  type: collections
+  name: community.windows
+
+
+#      - community.general
+#      - ansible.posix
+#      - community.windows
+#      - community.vmware
+#      - community.crypto
+#    executable: "{{ ansible_env.PATH }}/ansible-galaxy"
 
