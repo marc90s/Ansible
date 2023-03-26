@@ -1,6 +1,6 @@
 - name: Install ansible collection 
   environment:
-    PATH: "{{ lookup('env', 'PATH') }}/usr/local/bin:{{ ansible_env.PATH }}"
+    PATH: "{{ lookup('env', 'HOME') }}/usr/local/bin:{{ ansible_env.PATH }}" 
   community.general.ansible_galaxy_install:
     type: collection
     name: "{{ item }}"
